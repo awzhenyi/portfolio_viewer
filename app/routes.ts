@@ -1,3 +1,13 @@
 import { type RouteConfig, index } from "@react-router/dev/routes";
+import React from 'react';
+import Dashboard from './routes/dashboard';
 
-export default [index("routes/home.tsx")] satisfies RouteConfig;
+export const routes = [
+  index("routes/home.tsx"),
+  {
+    path: '/dashboard',
+    file: "routes/dashboard.tsx",
+  },
+];
+
+export default routes satisfies RouteConfig;
